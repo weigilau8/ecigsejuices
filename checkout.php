@@ -1,6 +1,5 @@
-<html>
 <?php
-	
+      
    function safeRequest($strGet) {
       $strGet = preg_replace("/[^\-a-zA-Z0-9\_]*/m","",$strGet);
       //$strGet = preg_replace("/[^a-zA-Z0-9(\040)\(\)']*/m","",$strGet); //<--to allow space \040
@@ -9,27 +8,24 @@
       $strGet = str_ireplace("decode","",$strGet);
       return trim($strGet);
    }
-  
+
 ?>
+<html>
+   
 	<head>
 		<title>Ecig & Ejuice Checkout</title>
 		
 		<!-- Force HTTPS -->
-		<script type="text/javascript">
-            if (window.location.protocol != "https:")
-                window.location.href = "https:" +
-                window.location.href.substring(window.location.protocol.length);
-        </script>
+		<script src="js/forcehttps.js"></script>
 		
 		<style type="text/css" media="all">
-
 			@import url('css/style.css');
 		</style>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.js"></script>
 		
-   <script type='text/javascript'>
+      <script type='text/javascript'>
 			function getValue(planID,buttons,amount){
-                      var total;
+            var total;
 						
 						
 					if(buttons=="1"){
@@ -139,7 +135,7 @@
       limelight_messages["invalid_credit_card"]         = "Invalid credit card number";          //caller inline - form_validator()
       limelight_messages["invalid_boleto"]              = "Invalid CNPJ or CPF ID";              //caller inline - form_validator()
       limelight_messages["invalid_terms"]               = "Please Agree with the Terms";         //caller inline - form_validator()
-	  limelight_messages["invalid_terms2"]              = "Please acknowledge that your over 18 and agree to comply with all state, local and federal laws. ";         //caller inline - form_validator()
+	   limelight_messages["invalid_terms2"]              = "Please acknowledge that your over 18 and agree to comply with all state, local and federal laws. ";         //caller inline - form_validator()
       limelight_messages["invalid_billing_fname"]       = "Please enter your Billing First Name";//caller inline - form_validator()
       limelight_messages["invalid_billing_lname"]       = "Please enter your Billing Last Name"; //caller inline - form_validator()
       limelight_messages["invalid_billing_city"]        = "Please enter your Billing City";      //caller inline - form_validator()
@@ -771,8 +767,8 @@ required_fields_label[3]='Security Code';
 											</tr>                       <tr>
                           <td align="right">Billing Country:</label></td>
                           <td>
-<div class="select-outer" style=";width:184px;" onclick="">
-   <div class="select-inner" style="">
+                           <div class="select-outer" style=";width:184px;" onclick="">
+                              <div class="select-inner" style="">
       <select border="0"  class="" id="billing_country" style="" name="billing_country"  size="1" onchange="ChangeCountryAndStateLabel(
                {
                   'obj'       : this,

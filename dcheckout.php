@@ -1,23 +1,19 @@
 <html>
-<?php
-   function safeRequest($strGet) {
-      $strGet = preg_replace("/[^\-a-zA-Z0-9\_]*/m","",$strGet);
-      //$strGet = preg_replace("/[^a-zA-Z0-9(\040)\(\)']*/m","",$strGet); //<--to allow space \040
-      $strGet = str_ireplace("javascript","",$strGet);
-      $strGet = str_ireplace("encode","",$strGet);
-      $strGet = str_ireplace("decode","",$strGet);
-      return trim($strGet);
-   }
-?>
+   <?php
+      function safeRequest($strGet) {
+         $strGet = preg_replace("/[^\-a-zA-Z0-9\_]*/m","",$strGet);
+         //$strGet = preg_replace("/[^a-zA-Z0-9(\040)\(\)']*/m","",$strGet); //<--to allow space \040
+         $strGet = str_ireplace("javascript","",$strGet);
+         $strGet = str_ireplace("encode","",$strGet);
+         $strGet = str_ireplace("decode","",$strGet);
+         return trim($strGet);
+      }
+   ?>
 	<head>
 		<title>Ecig & Ejuice Drop-sell Checkout</title>
 		
 		<!-- Force HTTPS -->
-		<script type="text/javascript">
-            if (window.location.protocol != "https:")
-                window.location.href = "https:" +
-                window.location.href.substring(window.location.protocol.length);
-        </script>
+		<script src="js/forcehttps.js"></script>
 		
 		<style type="text/css" media="all">
 

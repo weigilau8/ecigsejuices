@@ -6,11 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
 	<!-- Force HTTPS -->
-		<script type="text/javascript">
-            if (window.location.protocol != "https:")
-                window.location.href = "https:" +
-                window.location.href.substring(window.location.protocol.length);
-        </script>
+    <script src="js/forcehttps.js"></script>
 	
     <link href="css/style.css" rel="stylesheet">    
 </head>
